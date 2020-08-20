@@ -1,5 +1,6 @@
 <h1>basic login system</h1>
-<p>Basic login system using Nodejs. Configure the index.js for your database connection.</p>
+<p>Basic login system using Nodejs.</p>
+<p>Configure the index.js for your database connection.</p>
 
 <h3>clone this repository</h3>
 <p>git clone</p>
