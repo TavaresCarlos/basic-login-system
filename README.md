@@ -1,11 +1,11 @@
 <h1>basic login system</h1>
 <p>Basic login system using Nodejs</p>
 
-<h1>clone this repository</h1>
+<h3>clone this repository</h3>
 <p>git clone</p>
 
-<h1>install dependencies</h1>
+<h3>install dependencies</h3>
 <p>npm install</p>
 
-<h1> serve with hot reload at localhost:3000</h1>
-<p>node app.js</p>
+<h3> serve with hot reload at localhost:3000</h3>
+<p>node index.js</p>
