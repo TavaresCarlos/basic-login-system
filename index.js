@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 	host: 'localhost',
 	port: '3306',
 	user: 'root',
-	password: '',
+	password: '123456',
 	database: 'tcc'
 });
 
@@ -59,6 +59,7 @@ app.post('/auth', function(request, response){
 app.get('/home', function(request, response){
 	console.log("HOME");
 	if(request.session.loggedin){
+		//response.sendFile(path.join(__dirname + '/home.html'));
 		console.log('Welcome back, ' + request.session.username);
 	}
 	else{
