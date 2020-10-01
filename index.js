@@ -22,11 +22,11 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', function(request, response){
+app.get('/', (request, response) => {
 	response.sendFile(path.join(__dirname + '/index.html'))
 });
 
-app.post('/auth', function(request, response){
+app.post('/auth', (request, response) => {
 	var username = request.body.username;
 	var password = request.body.password;
 
@@ -40,7 +40,7 @@ app.post('/auth', function(request, response){
 			if (results.length > 0){
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('/home');
+				response.redirect('/login');
 				console.log('Query realizada');
 			}
 			else{
@@ -56,16 +56,21 @@ app.post('/auth', function(request, response){
 	}
 });
 
-app.get('/home', function(request, response){
+app.get('/login', (request, response) => {
 	console.log("HOME");
 	if(request.session.loggedin){
-		//response.sendFile(path.join(__dirname + '/home.html'));
 		console.log('Welcome back, ' + request.session.username);
+		response.redirect('/home');
 	}
 	else{
 		console.log('Please login to view this page');
 	}
 	response.end();
+})
+
+app.get('/home', (request, response) => {
+	console.log("INICIO");
+	response.sendFile(path.join(__dirname + '/home.html'));
 })
 
 app.listen(3000)
