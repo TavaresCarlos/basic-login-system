@@ -1,6 +1,6 @@
 <h1>basic login system</h1>
-<p>Basic login system using Nodejs.</p>
-<p>Configure the index.js for your database connection.</p>
+<p>Basic login system backend using Nodejs (Express, MySQL, Body Parser and Express Session).
+<p>Configure the index.js for your database connection example.</p>
 
 <h3>clone this repository</h3>
 <p>git clone</p>
